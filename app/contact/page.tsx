@@ -52,16 +52,6 @@ export default function ContactUsPage() {
           </div>
 
           <div className="space-y-6 pt-4">
-            {/* Phone Info */}
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition duration-300">
-                <FaPhone className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Phone Number</span>
-                <span className="text-lg font-extrabold text-slate-900 group-hover:text-emerald-600 transition">+91 9007000475</span>
-              </div>
-            </div>
 
             {/* Email Info */}
             <div className="flex items-center gap-4 group">

@@ -126,18 +126,6 @@ function Footer() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 border-t border-slate-200/80 pt-8 text-xs text-slate-600">
           <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
             <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
-              <FaPhone size={14} />
-            </div>
-            <div>
-              <span className="block text-slate-800 font-medium text-[10px]">
-                Call Any Time
-              </span>
-              <span className="font-bold text-slate-800">+91 9007000475</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-            <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
               <FaMapPin size={14} />
             </div>
             <div>
