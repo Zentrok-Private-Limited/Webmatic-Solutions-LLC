@@ -123,7 +123,7 @@ function Footer() {
         </div>
 
         {/* Bottom Contact Stripe */}
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 border-t border-slate-200/80 pt-8 text-xs text-slate-600">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 border-t border-slate-200/80 pt-8 text-xs text-slate-600">
           <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
             <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
               <FaMapPin size={14} />
