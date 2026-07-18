@@ -3,13 +3,19 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaBars, FaXmark } from "react-icons/fa6";
 
+type NavItem = {
+  label: string;
+  href?: string;
+  children?: NavItem[];
+};
+
 // Desktop Dropdown
 const NavDropdown = ({
   title,
   items,
 }: {
   title: string;
-  items: { label: string; href: string }[];
+  items: NavItem[];
 }) => (
   <div className="relative group">
     <button className="flex items-center gap-1 hover:text-emerald-600 transition font-medium">
@@ -17,15 +23,35 @@ const NavDropdown = ({
       <FaChevronDown size={10} />
     </button>
 
-    <div className="absolute top-full left-0 hidden group-hover:block w-72 bg-white text-slate-700 py-3 rounded-xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)] border border-slate-100 z-50">
+    <div className="absolute top-full -left-25 hidden group-hover:block w-72 bg-white rounded-xl border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)] py-3 z-50">
       {items.map((item) => (
-        <a
-          key={item.label}
-          href={item.href}
-          className="block px-6 py-2.5 text-sm hover:bg-emerald-50 hover:text-emerald-700 transition duration-150 font-medium"
-        >
-          {item.label}
-        </a>
+        <div key={item.label} className="relative group/item">
+          <a
+            href={item.href || "#"}
+            className="flex items-center justify-between px-6 py-2.5 text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition"
+          >
+            {item.label}
+
+            {item.children && (
+              <span className="text-xs">▶</span>
+            )}
+          </a>
+
+          {/* Second Level */}
+          {item.children && (
+            <div className="absolute left-full top-0 ml-1 hidden group-hover/item:block w-72 bg-white rounded-xl border border-slate-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.2)] py-3">
+              {item.children.map((child) => (
+                <a
+                  key={child.label}
+                  href={child.href}
+                  className="block px-6 py-2.5 text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition"
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
       ))}
     </div>
   </div>
@@ -36,27 +62,64 @@ function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
-  const services = [
-    { label: "Expert Tech Support", href: "/expert-tech-support" },
-    { label: "IT Support for Businesses", href: "/it-support-for-businesses" },
-    {
-      label: "Consultancy and Advisory Services",
-      href: "/consultancy-and-advisory-services",
-    },
-    { label: "Cybersecurity Services", href: "/cybersecurity-services" },
-    {
-      label: "Software Development Services",
-      href: "/software-development-services",
-    },
-    {
-      label: "Website Design & Development",
-      href: "/website-design-and-development",
-    },
-    {
-      label: "Digital Marketing Services",
-      href: "/digital-marketing-services",
-    },
-  ];
+  const services: NavItem[] = [
+  {
+    label: "Expert Tech Support",
+    href: "/expert-tech-support",
+    children: [
+      {
+        label: "Expert Tech Support",
+        href: "/expert-tech-support",
+      },
+      {
+        label: "Software Troubleshooting",
+        href: "/expert-tech-support/software-troubleshooting",
+      },
+      {
+        label: "Network Setup and Maintenance",
+        href: "/expert-tech-support/network-setup-and-maintenance",
+      },
+      {
+        label: "Cybersecurity Assistance",
+        href: "/expert-tech-support/cybersecurity-assistance",
+      },
+      {
+        label: "Device and System Optimization",
+        href: "/expert-tech-support/device-and-system-optimization",
+      },
+    ],
+  },
+
+  {
+    label: "IT Support for Businesses",
+    href: "/it-support-for-businesses",
+  },
+
+  {
+    label: "Consultancy and Advisory Services",
+    href: "/consultancy-and-advisory-services",
+  },
+
+  {
+    label: "Cybersecurity Services",
+    href: "/cybersecurity-services",
+  },
+
+  {
+    label: "Software Development Services",
+    href: "/software-development-services",
+  },
+
+  {
+    label: "Website Design & Development",
+    href: "/website-design-and-development",
+  },
+
+  {
+    label: "Digital Marketing Services",
+    href: "/digital-marketing-services",
+  },
+];
 
   const resources = [{ label: "FAQs", href: "/FAQ" }];
 
