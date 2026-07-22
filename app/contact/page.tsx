@@ -60,7 +60,7 @@ export default function ContactUsPage() {
               </div>
               <div>
                 <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</span>
-                <span className="text-lg font-extrabold text-slate-900 group-hover:text-emerald-600 transition">info@webmaticsolutionsllc.com</span>
+                <span className="text-lg font-extrabold text-slate-900 group-hover:text-emerald-600 transition">billing@webmaticsolutionsllc.com</span>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ export default function ContactUsPage() {
               <div className="pt-1">
                 <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider">Office Address</span>
                 <span className="text-sm font-bold text-slate-700 leading-relaxed block max-w-md group-hover:text-emerald-600 transition">
-                  xyz, Noida, INDIA
+                  212 N. 2nd St. STE 100, Richmond, KY 40475
                 </span>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function ContactUsPage() {
       <section className="bg-slate-50 border-t border-slate-100 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center space-y-3 mb-12">
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Join Into Our Hub</h2>
-          <p className="text-emerald-600 font-semibold text-sm">What they think about Innometrics Software</p>
+          <p className="text-emerald-600 font-semibold text-sm">What they think about Webmatic Solutions LLC</p>
         </div>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">

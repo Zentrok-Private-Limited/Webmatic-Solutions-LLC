@@ -133,7 +133,7 @@ function Footer() {
                 Address
               </span>
               <span className="font-bold text-slate-800">
-                xyz, Noida, India
+                212 N. 2nd St. STE 100, Richmond, KY 40475
               </span>
             </div>
           </div>
@@ -147,7 +147,7 @@ function Footer() {
                 Say Hello
               </span>
               <span className="font-bold text-emerald-600 underline">
-                info@webmaticsolutionsllc.com
+                billing@webmaticsolutionsllc.com
               </span>
             </div>
           </div>

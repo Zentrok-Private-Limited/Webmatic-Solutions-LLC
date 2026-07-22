@@ -279,7 +279,7 @@ export default function AboutPage() {
   <section className="bg-slate-50 border-t border-slate-100 py-20 px-6">
           <div className="max-w-7xl mx-auto text-center space-y-3 mb-12">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Join Into Our Hub</h2>
-            <p className="text-emerald-600 font-semibold text-sm">What they think about Innometrics Software</p>
+            <p className="text-emerald-600 font-semibold text-sm">What they think about Webmatic Solutions LLC</p>
           </div>
   
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">

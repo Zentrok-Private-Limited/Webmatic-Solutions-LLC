@@ -133,7 +133,7 @@ export default function WebsiteDesignDevelopment() {
             Join Into Our Hub
           </h2>
           <p className="text-emerald-600 font-semibold text-sm">
-            What they think about Innometrics Software
+            What they think about Webmatic Solutions LLC
           </p>
         </div>
 
