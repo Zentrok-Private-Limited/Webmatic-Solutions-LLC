@@ -275,47 +275,5 @@ export default function AboutPage() {
       </div>
     </div>
   </section>
-
-  <section className="bg-slate-50 border-t border-slate-100 py-20 px-6">
-          <div className="max-w-7xl mx-auto text-center space-y-3 mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight">Join Into Our Hub</h2>
-            <p className="text-emerald-600 font-semibold text-sm">What they think about Webmatic Solutions LLC</p>
-          </div>
-  
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-            {/* Facebook Hub */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex items-center gap-5">
-              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xl shrink-0">
-                <FaFacebookF className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-extrabold text-slate-950 text-base">Facebook</h4>
-                <span className="text-[11px] text-slate-400 font-medium">Open Source & Commit Code</span>
-              </div>
-            </div>
-  
-            {/* Twitter Hub */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex items-center gap-5">
-              <div className="w-14 h-14 bg-sky-50 text-sky-500 rounded-full flex items-center justify-center text-xl shrink-0">
-                <FaTwitter className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-extrabold text-slate-950 text-base">Twitter</h4>
-                <span className="text-[11px] text-slate-400 font-medium">Latest News & Update</span>
-              </div>
-            </div>
-  
-            {/* Instagram Hub */}
-            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex items-center gap-5">
-              <div className="w-14 h-14 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-xl shrink-0">
-                <FaInstagram className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-extrabold text-slate-950 text-base">Instagram</h4>
-                <span className="text-[11px] text-slate-400 font-medium">Channel for Community</span>
-              </div>
-            </div>
-          </div>
-        </section>
     </div>
   )}

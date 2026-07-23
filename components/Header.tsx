@@ -10,13 +10,7 @@ type NavItem = {
 };
 
 // Desktop Dropdown
-const NavDropdown = ({
-  title,
-  items,
-}: {
-  title: string;
-  items: NavItem[];
-}) => (
+const NavDropdown = ({ title, items }: { title: string; items: NavItem[] }) => (
   <div className="relative group">
     <button className="flex items-center gap-1 hover:text-emerald-600 transition font-medium">
       {title}
@@ -32,9 +26,7 @@ const NavDropdown = ({
           >
             {item.label}
 
-            {item.children && (
-              <span className="text-xs">▶</span>
-            )}
+            {item.children && <span className="text-xs">▶</span>}
           </a>
 
           {/* Second Level */}
@@ -63,63 +55,93 @@ function Header() {
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
   const services: NavItem[] = [
-  {
-    label: "Expert Tech Support",
-    href: "/expert-tech-support",
-    children: [
-      {
-        label: "Expert Tech Support",
-        href: "/expert-tech-support",
-      },
-      {
-        label: "Software Troubleshooting",
-        href: "/expert-tech-support/software-troubleshooting",
-      },
-      {
-        label: "Network Setup and Maintenance",
-        href: "/expert-tech-support/network-setup-and-maintenance",
-      },
-      {
-        label: "Cybersecurity Assistance",
-        href: "/expert-tech-support/cybersecurity-assistance",
-      },
-      {
-        label: "Device and System Optimization",
-        href: "/expert-tech-support/device-and-system-optimization",
-      },
-    ],
-  },
+    {
+      label: "Expert Tech Support",
+      href: "/expert-tech-support",
+      children: [
+        {
+          label: "Expert Tech Support",
+          href: "/expert-tech-support",
+        },
+        {
+          label: "Software Troubleshooting",
+          href: "/expert-tech-support/software-troubleshooting",
+        },
+        {
+          label: "Network Setup and Maintenance",
+          href: "/expert-tech-support/network-setup-and-maintenance",
+        },
+        {
+          label: "Cybersecurity Assistance",
+          href: "/expert-tech-support/cybersecurity-assistance",
+        },
+        {
+          label: "Device and System Optimization",
+          href: "/expert-tech-support/device-and-system-optimization",
+        },
+      ],
+    },
 
-  {
-    label: "IT Support for Businesses",
-    href: "/it-support-for-businesses",
-  },
+    {
+      label: "IT Support for Businesses",
+      href: "/it-support-for-businesses",
+      children: [
+        {
+          label: "IT Support for Businesses",
+          href: "/it-support-for-businesses",
+        },
 
-  {
-    label: "Consultancy and Advisory Services",
-    href: "/consultancy-and-advisory-services",
-  },
+        {
+          label: "Managed IT Services",
+          href: "/it-support-for-businesses/managed-services",
+        },
 
-  {
-    label: "Cybersecurity Services",
-    href: "/cybersecurity-services",
-  },
+        {
+          label: "Network Design and Setup",
+          href: "/it-support-for-businesses/network-design-and-setup",
+        },
 
-  {
-    label: "Software Development Services",
-    href: "/software-development-services",
-  },
+        {
+          label: "Data Backup and Disaster Recovery",
+          href: "/it-support-for-businesses/data-backup-and-disaster-recovery",
+        },
 
-  {
-    label: "Website Design & Development",
-    href: "/website-design-and-development",
-  },
+        {
+          label: "Cybersecurity Solutions",
+          href: "/it-support-for-businesses/cybersecurity-solutions",
+        },
+        {
+          label: "Cloud Services and Visualization",
+          href: "/it-support-for-businesses/cloud-services-and-visualization",
+        },
+      ],
+    },
 
-  {
-    label: "Digital Marketing Services",
-    href: "/digital-marketing-services",
-  },
-];
+    {
+      label: "Consultancy and Advisory Services",
+      href: "/consultancy-and-advisory-services",
+    },
+
+    {
+      label: "Cybersecurity Services",
+      href: "/cybersecurity-services",
+    },
+
+    {
+      label: "Software Development Services",
+      href: "/software-development-services",
+    },
+
+    {
+      label: "Website Design & Development",
+      href: "/website-design-and-development",
+    },
+
+    {
+      label: "Digital Marketing Services",
+      href: "/digital-marketing-services",
+    },
+  ];
 
   const resources = [{ label: "FAQs", href: "/FAQ" }];
 
@@ -168,7 +190,6 @@ function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-slate-100">
-
           <a
             href="/about"
             className="block px-6 py-4 border-b border-slate-100 text-slate-700 font-medium"

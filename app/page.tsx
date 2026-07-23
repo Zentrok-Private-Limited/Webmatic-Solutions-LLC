@@ -292,7 +292,7 @@ export default function LandingPage() {
             Our Beaming Faces
           </h2>
           <p className="text-emerald-600 font-medium text-sm">
-            What they think about Innometrics Software
+            What they think about Webmatic Solutions LLC
           </p>
         </div>
 
@@ -311,12 +311,12 @@ export default function LandingPage() {
               {
                 name: "David Johnson",
                 location: "Ohio",
-                text: "I've never experienced better IT support. Innometrics Software Pvt. Ltd. provided excellent advice on improving my company's data architecture.",
+                text: "I've never experienced better IT support. Webmatic Solutions LLC provided excellent advice on improving my company's data architecture.",
               },
               {
                 name: "John Peterson",
                 location: "New York",
-                text: "Innometrics Software service saved me when my computer crashed right before a major client pitch. Their 24/7 support is a lifesaver.",
+                text: "Webmatic Solutions LLC service saved me when my computer crashed right before a major client pitch. Their 24/7 support is a lifesaver.",
               },
             ].map((t, idx) => (
               <div
